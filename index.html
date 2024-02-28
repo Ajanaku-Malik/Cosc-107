@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>count down timer</title>
+    <title>countdown timer</title>
     <style>
       #countdown {
         font-size: 55px;
@@ -66,12 +66,9 @@
     <p id="endTime"></p>
 
     <script>
-      // Set the end date and time for the giveaway
+      // Set the end date and time for the giveaway (54 days from now)
       const endDate = new Date();
-      endDate.setDate(endDate.getDate() + 15);
-      endDate.setHours(endDate.getHours() + 16);
-      endDate.setMinutes(endDate.getMinutes() + 43);
-      endDate.setSeconds(endDate.getSeconds() + 54);
+      endDate.setDate(endDate.getDate() + 54);
 
       // Function to update the countdown timer
       function updateCountdown() {
@@ -89,7 +86,7 @@
 
         document.getElementById(
           "countdown"
-        ).innerText = `${days} D ${hours} H ${minutes} M ${seconds} S`;
+        ).innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
       }
 
       // Function to update the end date and time paragraphs
